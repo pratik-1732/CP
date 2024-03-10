@@ -13,7 +13,7 @@ This repository contains solutions to various problems from Codeforces, an onlin
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/pratik1732/codeforces-contest-solutions.git
+git clone [https://github.com/pratik1732/codeforces-contest-solutions.git](https://github.com/pratik-1732/Codeforces.git)
 ```
 
 2. Navigate to the desired problem directory:
