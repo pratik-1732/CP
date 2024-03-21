@@ -5,22 +5,34 @@ using namespace std;
 #define pb push_back 
 
 void solve(){
-	vector<string> str;
+	string a,b,c;
+	cin>>a>>b>>c;
+	vector<string> temp;
 	for(int i=0; i<3; i++){
-	string s; cin>>s;
-	str.pb(s);
-	}
-	
-	map<string,int> count;
-	for(int i=0; i<3; i++){
-		//cout<<i<<endl;
-		string s=str[i];
+		string s="";
+		s+=a[i];
 		for(int j=0; j<3; j++){
-			string temp;
-			temp+=s[j];
+			if(abs(j-i)<2){
+				s+=b[j];
+				for(int k=0; k<3; k++){
+					if(abs(k-j)<2){
+						s+=c[k];
+						temp.pb(s);
+						s.pop_back();
+					}
+				}
+				s.pop_back();
+			}
 		}
 	}
-	
+	temp.pb(a);
+	temp.pb(b);
+	temp.pb(c);
+	sort(temp.begin(), temp.end());
+	// for(auto i: temp){
+	// 	cout<<i<<" ";
+	// }
+	cout<<temp[0]<<endl;
 
 }
 
